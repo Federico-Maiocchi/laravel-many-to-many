@@ -45,6 +45,10 @@ class ProjectController extends Controller
 
         $new_project = Project::create($data);
 
+        if($request->has('technologies')) {
+            $new_project->technologies()->attach($data['technologies']);
+        }
+
         return redirect()->route('admin.projects.show',$new_project);
     }
 
@@ -65,7 +69,9 @@ class ProjectController extends Controller
     {
         $types = Type::orderBy('name','ASC')->get();
 
-        return view('admin.projects.edit', compact('project', 'types'));
+        $technologies = Technology::orderBy('name','ASC')->get();
+
+        return view('admin.projects.edit', compact('project', 'types', 'technologies'));
     }
 
     /**
@@ -76,6 +82,12 @@ class ProjectController extends Controller
         $data = $request->all();
 
         $project->update($data);
+
+        if($request->has('technologies')) {
+            $project->technologies()->sync($data['technologies']);
+        } else {
+            $project->technologies()->detach();
+        }
 
         return redirect()->route('admin.projects.index', $project->id);
     }

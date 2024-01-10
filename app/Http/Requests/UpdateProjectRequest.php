@@ -26,6 +26,7 @@ class UpdateProjectRequest extends FormRequest
             'img'=>['min:2'],
             'description'=>['min:2'],
             'types_id'=>['nullable','exists:types,id'],
+            'technology_id'=>['nullable','exists:technologies,id'],
         ];
     }
 }
