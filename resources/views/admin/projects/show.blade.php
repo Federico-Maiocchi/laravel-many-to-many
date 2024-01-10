@@ -10,7 +10,7 @@
                 
                 <div class="card h-100" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{$project->title}}</h5>
+                        <h5 class="card-title ">{{$project->title}}</h5>
                         <p>{{optional($project->type)->name}}</p>
 
                         <div class="d-flex"></div>

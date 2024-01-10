@@ -9,8 +9,13 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">{{ __('User Dashboard') }}</div>
+                
                 <div>
                     <button class="btn btn-primary"><a href="{{route('admin.projects.index')}}">Guarda i Progetti</a></button>
+                </div>
+
+                <div>
+                    <button class="btn btn-info text-light"><a href="{{route('admin.projects.create')}}">Crea Progetto</a></button>
                 </div>
                 
                 
