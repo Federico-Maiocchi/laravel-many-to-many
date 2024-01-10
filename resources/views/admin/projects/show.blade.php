@@ -12,6 +12,16 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$project->title}}</h5>
                         <p>{{optional($project->type)->name}}</p>
+
+                        <div class="d-flex"></div>
+                            <ul>
+                                @foreach($project->technologies as $technology)
+                            
+                                <li class="badge rounded-pill text-bg-primary">{{$technology->name}}</li>
+
+                                @endforeach
+                            </ul>
+                       
     
                         <p class="card-text">Descrizione: {{$project->description}}</p>
                         <p class="card-text">Immagine: {{$project->img}}</p>
