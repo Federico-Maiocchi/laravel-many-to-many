@@ -99,6 +99,8 @@ class ProjectController extends Controller
     {
         $project->delete();
 
+        $project->tecnologies()->sync([]);
+
         return redirect()->route('admin.projects.index');
     }
 
