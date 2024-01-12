@@ -7,7 +7,7 @@
 </section>
     
     <div class="container">
-        <h1 class="text-light">Crea progetto</h1>
+        <h1 class="text-light">Crea Nuovo Tipo</h1>
         <form action="{{ route('admin.types.store' ) }}" method="POST" >
 
             @csrf

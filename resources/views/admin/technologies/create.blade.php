@@ -3,11 +3,11 @@
 @section('content')
 
 <section class="py-3">
-    <button class="btn btn-info text-light"><a href="{{route('admin.technologies.index')}}">Lista tipi</a></button>
+    <button class="btn btn-info text-light"><a href="{{route('admin.technologies.index')}}">Lista tecnologie</a></button>
 </section>
     
     <div class="container">
-        <h1 class="text-light">Crea progetto</h1>
+        <h1 class="text-light">Crea Nuova Tecnologia</h1>
         <form action="{{ route('admin.technologies.store' ) }}" method="POST" >
 
             @csrf
@@ -18,7 +18,7 @@
             </div>
 
             <div class="mb-3">
-                <input type="submit" class="btn btn-success" value="Crea nuovo tipo">
+                <input type="submit" class="btn btn-success" value="Crea nuova tecnologia">
             </div>
 
         </form>

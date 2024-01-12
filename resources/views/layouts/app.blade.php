@@ -82,6 +82,38 @@
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Generale
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                
+                                <a class="dropdown-item" href="{{route('admin.projects.index')}}">Lista Progetti</a>
+                                
+                                <a class="dropdown-item" href="{{route('admin.types.index')}}">Lista Tipi</a>
+                                
+                                <a class="dropdown-item" href="{{route('admin.technologies.index')}}">Lista Tecnologie</a>
+                                
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                               Crea
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                
+                            
+                                <a class="dropdown-item" href="{{route('admin.projects.create')}}">Crea Progetto</a>
+                                
+                                <a class="dropdown-item" href="{{route('admin.types.create')}}">Crea Tipo</a>
+                                
+                                <a class="dropdown-item" href="{{route('admin.technologies.create')}}">Crea Tecnologie</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
