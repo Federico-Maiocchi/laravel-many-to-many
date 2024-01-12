@@ -19,7 +19,11 @@
                 </div>
 
                 <div>
-                    <button class="btn btn-primary"><a href="{{route('admin.types.index')}}">Guarda i tipi</a></button>
+                    <button class="btn btn-primary"><a href="{{route('admin.types.index')}}">Lista tipi</a></button>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary"><a href="{{route('admin.technologies.index')}}">Lista tecnologie</a></button>
                 </div>
                 
                 
