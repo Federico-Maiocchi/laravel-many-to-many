@@ -9,6 +9,7 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Technology;
 use App\Models\Type;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 
@@ -42,6 +43,8 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $data = $request->all();
+
+        $data['slug'] = Str::slug($data['title'], '-');
 
         $new_project = Project::create($data);
 
@@ -80,6 +83,8 @@ class ProjectController extends Controller
     public function update(UpdateProjectRequest $request, Project $project)
     {
         $data = $request->all();
+
+        $data['slug'] = Str::slug($data['title'], '-');
 
         $project->update($data);
 
