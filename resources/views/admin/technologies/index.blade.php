@@ -9,6 +9,8 @@
                     <tr>
                         <th>ID</th>
                         <th>NOME</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

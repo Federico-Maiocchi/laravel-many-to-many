@@ -29,7 +29,7 @@ return new class extends Migration
         Schema::table('projects', function (Blueprint $table) {
             // rimuovere il vincolo della relazione
             // $table->dropForeign('projects_type_id_foreign');
-            $table->dropForeign('type_id');
+            $table->dropForeign(['type_id']);
             // droppa la colonna type_id
             $table->dropColumn('type_id');
         });
