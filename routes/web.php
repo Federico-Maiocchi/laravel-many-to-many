@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +47,14 @@ Route::middleware('auth', 'verified')
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::resource('projects', ProjectController::class);
+
+    Route::resource('types', TypeController::class);
+
+    // Route::get('/types', [TypeController::class, 'index'])->name('types.index');
+    // Route::get('/types/create', [TypeController::class, 'create'])->name('types.create');
+    // Route::post('/types', [TypeController::class, 'store'])->name('types.store');
+    // Route::get('/types/create', [TypeController::class, 'create'])->name('types.create');
+
     
 });
 

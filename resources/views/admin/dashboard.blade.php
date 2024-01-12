@@ -17,6 +17,10 @@
                 <div>
                     <button class="btn btn-info text-light"><a href="{{route('admin.projects.create')}}">Crea Progetto</a></button>
                 </div>
+
+                <div>
+                    <button class="btn btn-primary"><a href="{{route('admin.types.index')}}">Guarda i tipi</a></button>
+                </div>
                 
                 
                 <div class="card-body">
